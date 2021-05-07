@@ -60,4 +60,21 @@ for tr in year_table_tbody_row:
 
 print("")
 
+#리스트 생성
+year_list=[]
+birth_number_list=[]
+birth_rate_list=[]
+a=[]
+
+for year_info_ in birth_info:
+    #print(year_info_)
+    a.append(year_info_)
+birth_number_list.extend(a[0])
+birth_rate_list.extend(a[1])
+print(birth_number_list)
+print(birth_rate_list)
+for year in year_info:
+    year_list.extend(year_info[1:10])
+    break
+print(year_list)
 
