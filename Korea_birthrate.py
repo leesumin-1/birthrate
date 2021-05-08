@@ -78,3 +78,15 @@ for year in year_info:
     break
 print(year_list)
 
+
+#그래프 만들기
+matplotlib.rcParams["axes.unicode_minus"]=False #폰트 깨짐 대처
+plt.rc('font', family='Malgun Gothic')
+
+x=range(len(year_list))
+
+fig, ax1 = plt.subplots()
+ax1.set_title('출생아 수 및 합계 출산율')
+ax1.plot(x, birth_rate_list, '-o',color="red")
+ax1.set_ylim(0,2)
+ax1.set_ylabel('합계출산율')
