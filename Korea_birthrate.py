@@ -90,3 +90,17 @@ ax1.set_title('출생아 수 및 합계 출산율')
 ax1.plot(x, birth_rate_list, '-o',color="red")
 ax1.set_ylim(0,2)
 ax1.set_ylabel('합계출산율')
+
+ax2=ax1.twinx() # x축 공유하겠다
+ax2.bar(x, birth_number_list, color="gray")
+ax2.set_ylim(300,500)
+ax2.set_xlabel('년도')
+ax2.set_ylabel('출산아 수')
+
+ax1.set_zorder(ax2.get_zorder() + 10) # 그래프 앞뒤 위치(클수록 위쪽에)
+ax1.patch.set_visible(False) #
+
+ax1.set_xticks(x) #꺾은선그래프 위 점 찍겠다
+ax1.set_xticklabels(year_list) #x축 값 설정
+
+plt.show()
